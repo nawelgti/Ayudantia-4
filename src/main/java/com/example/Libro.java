@@ -61,9 +61,26 @@ public class Libro {
             if (this.cantidadDisponible == 0) {
                 this.disponible = false;
             }
-            System.out.println("El libro '" + this.getTitulo() + "' ha sido prestado.");
+            System.out.println("Se ha prestado el libro '" + this.getTitulo());
         } else {
             System.out.println("El libro no está disponible.");
         }
+    }
+
+    public void devolver() {
+        if (this.cantidadDisponible == 0) {
+            this.disponible = true;
+        }
+        this.cantidadDisponible++;
+        System.out.println("Se ha devuelto el libro '" + this.getTitulo());
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Titulo: " + this.getTitulo());
+        System.out.println("Autor: " + this.getAutor());
+        System.out.println("Genero: " + this.getGenero());
+        System.out.println("ISBN: " + this.getISBN());
+        System.out.println("Cantidad disponible: " + this.getCantidadDisponible());
+        System.out.println("Disponible: " + this.isDisponible());
     }
 }
