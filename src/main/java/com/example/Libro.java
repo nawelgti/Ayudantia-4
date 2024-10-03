@@ -32,7 +32,7 @@ public class Libro {
     public int getCantidadDisponible() {
         return cantidadDisponible;
     }
-    public boolean isDisponible() {
+    public boolean getDisponible() {
         return disponible;
     }
 
@@ -61,7 +61,7 @@ public class Libro {
             if (this.cantidadDisponible == 0) {
                 this.disponible = false;
             }
-            System.out.println("Se ha prestado el libro '" + this.getTitulo());
+            System.out.println("Se ha prestado el libro '" + this.getTitulo()+"'\n");
         } else {
             System.out.println("El libro no está disponible.");
         }
@@ -72,7 +72,7 @@ public class Libro {
             this.disponible = true;
         }
         this.cantidadDisponible++;
-        System.out.println("Se ha devuelto el libro '" + this.getTitulo());
+        System.out.println("Se ha devuelto el libro '" + this.getTitulo()+"'\n");
     }
 
     public void mostrarInfo() {
@@ -81,6 +81,6 @@ public class Libro {
         System.out.println("Genero: " + this.getGenero());
         System.out.println("ISBN: " + this.getISBN());
         System.out.println("Cantidad disponible: " + this.getCantidadDisponible());
-        System.out.println("Disponible: " + this.isDisponible());
+        System.out.println("Disponible: " + this.getDisponible());
     }
 }
